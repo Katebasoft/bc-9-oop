@@ -11,12 +11,12 @@ def students_att():
 	
 
 s1 = student.Student('Kevin', 'Chiteri')
-s1.attended("2016-05-04")
+s1.attended(date = "2016-05-04")
 #Not attended
 s2 = student.Student('Allan', 'Kajara')
 #attended
 s3 = student.Student('Innocent', 'Kateba', 'Tanzania')
-s3.attended("2016-07-15")
+s3.attended(date = "2016-07-15")
 
 s4 = student.Student('Joan', 'John')
 
@@ -27,7 +27,7 @@ s5.attended()
 s6 = student.Student('Sweet', 'Love')
 
 s7 = student.Student('Lovely', 'Girl')
-s7.attended("2015-07-09")
+s7.attended(date = "2015-07-09")
 
 s8 = student.Student('Nice', 'Man')
 
