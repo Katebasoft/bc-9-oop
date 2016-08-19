@@ -3,11 +3,12 @@ import student
 ''' Function to collect keys of Students who attended on a particular day
 and print the particular date they attended '''
 
-def students_att():
+def students_att(date):
 	students_keys = student.attendees.keys()
 	students_values = student.attendees.values()
 	for index in range (len(student.attendees)):
-		print students_keys[index] + " " + str(students_values[index])
+		if date == str(students_values[index]):
+			print students_keys[index] + " " + str(students_values[index])
 	
 
 s1 = student.Student('Kevin', 'Chiteri')
@@ -39,4 +40,4 @@ s10 = student.Student('Good', 'Person')
 
 # Printing those who attended in a particular day
 
-students_att()
+students_att("2016-07-15")
