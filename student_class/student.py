@@ -21,8 +21,13 @@ class Student(object):
 		self.lname = lname
 		self.map_country = country
 
+
+
 	#Method for collecting the information if a particular student attended
-	def attended(self, date = datetime.date.today()):
-		self.date = date
+	def attended(self,**kwargs):
+		self.loc = kwargs.setdefault('loc', 'Hogwarts')
+		self.teacher = kwargs.setdefault('teacher', 'Anthony')
+		self.date = kwargs.setdefault('date', datetime.date.today())
 		#Store a person along with the date he attended class
 		attendees[self.fname + " " + self.lname] = self.date
+	
